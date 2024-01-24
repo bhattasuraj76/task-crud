@@ -58,6 +58,7 @@ Seed dummy values for the projects and tasks module using:
 php artisan db:seed
 ```
 
+Note: Please ensure that there are dummy values for the projects.
 ### Run the Application
 
 Start the application by running the following command:

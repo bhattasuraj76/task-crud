@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+// Routes to handle tasks crud
 Route::get('/', [TaskController::class, 'index'])->name('tasks.index');
 Route::get('/tasks/create', [TaskController::class, 'create'])->name('tasks.create');
 Route::post('/tasks', [TaskController::class, 'store'])->name('tasks.store');
@@ -23,4 +23,10 @@ Route::get('/tasks/{task}/edit', [TaskController::class, 'edit'])->name('tasks.e
 Route::put('/tasks/{task}', [TaskController::class, 'update'])->name('tasks.update');
 Route::delete('/tasks/{task}', [TaskController::class, 'destroy'])->name('tasks.destroy');
 
+// Route to hanlde tasks priority change
 Route::post('/tasks/priority-change', [TaskController::class, 'taskPriorityChange'])->name('tasks.priority_change');
+
+// Fallback route redirect to home page
+Route::fallback(function () {
+    return redirect('/');
+});
