@@ -21,7 +21,7 @@ composer install
 Create a `.env` file in the project root by copying the contents from `.env.example`:
 
 ```bash
-mv .env.example .env
+cp .env.example .env
 ```
 
 ### Configure Database
